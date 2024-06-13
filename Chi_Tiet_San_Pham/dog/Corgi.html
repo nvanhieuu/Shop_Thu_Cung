@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Chó Corgi Thuần Chủng</title>
+    <link rel="icon" href="/images/Logo.jpg" type="image/jpg">
+    <link rel="stylesheet" type="text/css" href="../Chi_Tiet_San_Pham.css">
+    <link rel="stylesheet" href="product_details.html?id=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+</head>
+
+<body>
+
+    <h1>Corgi</h1>
+
+    <div class="container">
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-body">
+                <img id="productImage" src="" alt="Chó">
+                <div class="product-info">
+                  <p id="productName"></p>
+                  <p id="productPrice"></p>
+                  <p id="productOriginalPrice"></p>
+                  <button id="buyBtn" class="buy-button">CHAT ZALO - HỎI THÊM VỀ BÉ</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Watson.jpg" alt="Chó">
+            <p>Watson – Corgi Trắng Vàng Đực, Tiêm 2 Mũi</p>
+            <p class="price">6,990,000đ<span class="discount">-13%</span></p>
+            <p class="original-price">8,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Upo.jpg" alt="Chó">
+            <p>Upo – Corgi Trắng Vàng Đực, Tiêm 2 Mũi</p>
+            <p class="price">6,990,000đ<span class="discount">-13%</span></p>
+            <p class="original-price">8,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Liang.jpg" alt="Chó">
+            <p>Liang – Corgi Trắng Vàng Cái, Tiêm 2 Mũi</p>
+            <p class="price">6,990,000đ<span class="discount">-13%</span></p>
+            <p class="original-price">8,000,000đ</p>
+        </div>
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Julia.jpg" alt="Chó">
+            <p>Julia – Corgi Trắng Vàng Cái, Tiêm 2 Mũi</p>
+            <p class="price">5,990,000đ<span class="discount">-25%</span></p>
+            <p class="original-price">8,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Huck.jpg" alt="Chó">
+            <p>Huck – Corgi Trắng Vàng Đực, Tiêm 2 Mũi</p>
+            <p class="price">6,990,000đ<span class="discount">-30%</span></p>
+            <p class="original-price">10,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Chynna.jpg" alt="Chó">
+            <p>Chynna – Corgi Trắng Vàng Cái, Tiêm 2 Mũi</p>
+            <p class="price">6,990,000đ<span class="discount">-13%</span></p>
+            <p class="original-price">8,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Billy.jpg" alt="Chó">
+            <p>Billy – Corgi Trắng Vàng Cái, Tiêm 2 Mũi</p>
+            <p class="price">6,990,000đ<span class="discount">-13%</span></p>
+            <p class="original-price">8,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Corgi/Corgi-Amos.jpg" alt="Chó">
+            <p>Amos – Corgi Trắng Vàng Đực, Tiêm 2 Mũi</p>
+            <p class="price">5,990,000đ <span class="discount">-25%</span></p>
+            <p class="original-price">8,000,000đ</p>
+        </div> 
+
+    </div>
+
+    <script>
+
+        function showProductInfo(element) {
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            
+            modal.style.display = "block";
+            document.getElementById('productImage').src = element.getElementsByTagName('img')[0].src;
+            document.getElementById('productName').innerText = element.getElementsByTagName('p')[0].innerText;
+            document.getElementById('productPrice').innerText = element.getElementsByTagName('p')[1].innerText;
+            document.getElementById('productOriginalPrice').innerText = element.getElementsByTagName('p')[2].innerText;
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+    

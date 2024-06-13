@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="images/Logo.jpg" type="image/jpg">
+        <title>Shop Mun & Meo Meo</title>
+    </head>
+
+    <body>
+
+        <div class="toolbar">
+            <img src="images/Logo.jpg" alt="Logo" style="height: 40px;">
+            <button class="menu-button" onclick="goToTop()">Trang chủ</button>
+            <button class="dogs-button" onclick="scrollToElement('dogs-section')">Chó</button>
+            <button class="cats-button" onclick="scrollToElement('cats-section')">Mèo</button>
+            <input type="search" id="site-search" name="q" aria-label="Tìm thú cưng của bạn" placeholder="Tìm thú cưng của bạn">
+            <div style="flex-grow: 1;"></div>
+            <button id="loginBtn" class="login-button">Đăng nhập</button>
+            <button id="registerBtn" class="register-button">Đăng ký</button>
+
+        </div>
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span id="closeBtn" class="close">&times;</span>
+                    <form action="/submit_login" method="post">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <input type="submit" value="Đăng nhập">
+                    </form>
+                    <p class="register-link">Chưa có tài khoản? <a href="#" onclick="registerEvent()">Đăng ký ngay!</a></p>
+            </div>
+        </div>
+
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span id="closeBtn" class="close">&times;</span>
+                <form action="/submit_registration" method="post">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="phone"><b>Phone Number</b></label>
+                    <input type="tel" placeholder="Enter Phone Number" name="phone" required>
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <input type="submit" value="Đăng ký">
+                </form>
+                <p class="login-link">Bạn đã có tài khoản? <a href="#" onclick="loginEvent()">Đăng nhập</a></p>
+            </div>
+        </div>
+    
+        <div id="background"></div>
+
+        <h1 id="dogs-section">GIỐNG CHÓ CẢNH</h1>
+            <div class="row" id="dogs">
+                
+                <div class="product">
+                    <img src="images/dog/Poodle.jpg" alt="Chó">
+                    <div class="product-info">
+                        <span>Poodle</span>
+                        <a href="Chi_Tiet_San_Pham/dog/Poodle.html" class="button" onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/dog/Pembroke-Welsh-Corgi.jpg" alt="Chó">
+                    <div class="product-info">
+                        <span>Corgi</span>
+                        <a href="Chi_Tiet_San_Pham/dog/Corgi.html" class="button" onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+
+                <div class="product">
+                    <img src="images/dog/Alaska.jpg" alt="Chó">
+                    <div class="product-info">
+                        <span>Alaska</span>
+                        <a href="Chi_Tiet_San_Pham/dog/Alaska.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/dog/Husky.jpg" alt="Chó">
+                    <div class="product-info">
+                        <span>Husky</span>
+                        <a href="Chi_Tiet_San_Pham/dog/Husky.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/dog/Golden-Retriever.jpg" alt="Chó">
+                    <div class="product-info">
+                        <span>Golden</span>
+                        <a href="Chi_Tiet_San_Pham/dog/Golden.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <h1 id="cats-section">GIỐNG MÈO CẢNH</h1>
+            <div class="row" id="cats">
+
+                <div class="product">
+                    <img src="images/cat/Maine-coon.jpg" alt="Mèo">
+                    <div class="product-info">
+                        <span>Maine Coon</span>
+                        <a href="Chi_Tiet_San_Pham/cat/Main-coon.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/cat/Meo-khong-long-Sphynx.jpg" alt="Mèo">
+                    <div class="product-info">
+                        <span>Sphynx</span>
+                        <a href="Chi_Tiet_San_Pham/cat/Meo-khong-long-Sphynx.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/cat/Meo-Anh-Long-Ngan.jpg" alt="Mèo">
+                    <div class="product-info">
+                        <span>Anh Lông Ngắn</span>
+                        <a href="Chi_Tiet_San_Pham/cat/Meo-Anh-Long-Ngan.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/cat/Meo-Anh-Long-Dai.jpg" alt="Mèo">
+                    <div class="product-info">
+                        <span>Anh Lông Dài</span>
+                        <a href="Chi_Tiet_San_Pham/cat/Meo-Anh-Long_Dai.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/cat/Meo-ba-tu.jpg" alt="Mèo">
+                    <div class="product-info">
+                        <span>Ba tư</span>
+                        <a href="Chi_Tiet_San_Pham/cat/Meo-ba-tu.html" class="button "onclick="redirectToProductDetail()">Chi tiết</a>
+                    </div>
+                </div>
+
+            </div>
+
+        <script>
+
+            var loginModal = document.getElementById("loginModal");
+            var registerModal = document.getElementById("registerModal");
+
+            var loginBtn = document.getElementById("loginBtn");
+            var registerBtn = document.getElementById("registerBtn");
+
+            var closeBtn = document.getElementsByClassName("close");
+
+            loginBtn.onclick = function() {
+                loginModal.style.display = "block";
+                registerModal.style.display = "none";
+            }
+
+            registerBtn.onclick = function() {
+                registerModal.style.display = "block";
+                loginModal.style.display = "none";
+            }
+
+            for(var i = 0; i < closeBtn.length; i++) {
+                closeBtn[i].onclick = function() {
+                    loginModal.style.display = "none";
+                    registerModal.style.display = "none";
+                }
+            }
+
+            window.onclick = function(event) {
+                if (event.target == loginModal || event.target == registerModal) {
+                    loginModal.style.display = "none";
+                    registerModal.style.display = "none";
+                }
+            }
+
+            function registerEvent() {
+                document.getElementById('registerModal').style.display = 'block';
+                document.getElementById('loginModal').style.display = 'none';
+            }
+
+            function loginEvent() {
+                document.getElementById('loginModal').style.display = 'block';
+                document.getElementById('registerModal').style.display = 'none';
+            }
+
+            function redirectToProductDetail(productId) {
+                window.location.href = 'product_detail.html?id=' + productId;
+            }
+            
+            function scrollToElement(id) {
+                 var element = document.getElementById(id);
+                element.scrollIntoView({behavior: "smooth"});
+            }
+
+            function goToTop() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+
+        </script>
+
+    </body>
+</html>

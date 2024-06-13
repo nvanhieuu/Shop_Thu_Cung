@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Chó Husky Thuần Chủng</title>
+    <link rel="icon" href="/images/Logo.jpg" type="image/jpg">
+    <link rel="stylesheet" type="text/css" href="../Chi_Tiet_San_Pham.css">
+    <link rel="stylesheet" href="product_details.html?id=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+</head>
+
+<body>
+
+    <h1>Husky</h1>
+
+    <div class="container">
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-body">
+                <img id="productImage" src="" alt="Chó">
+                <div class="product-info">
+                  <p id="productName"></p>
+                  <p id="productPrice"></p>
+                  <p id="productOriginalPrice"></p>
+                  <button id="buyBtn" class="buy-button">CHAT ZALO - HỎI THÊM VỀ BÉ</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2655-C13157-1.jpg" alt="Chó">
+            <p>Husky Đen Trắng Cái C13157</p>
+            <p class="price">7,990,000đ<span class="discount">-11%</span></p>
+            <p class="original-price">9,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2654-C13156-1.jpg" alt="Chó">
+            <p>Husky Đen Trắng Cái C13156</p>
+            <p class="price">7,990,000đ<span class="discount">-11%</span></p>
+            <p class="original-price">9,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2653-C13155-1.jpg" alt="Chó">
+            <p>Husky Đen Trắng Cái C13155</p>
+            <p class="price">7,990,000đ<span class="discount">-11%</span></p>
+            <p class="original-price">9,000,000đ</p>
+        </div>
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2651-C13154-1.jpg" alt="Chó">
+            <p>Husky Đen Trắng Cái C13154</p>
+            <p class="price">7,990,000đ<span class="discount">-11%</span></p>
+            <p class="original-price">9,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2650-C13153-1.jpg" alt="Chó">
+            <p>Husky Đen Trắng Đực C13153</p>
+            <p class="price">7,990,000đ<span class="discount">-11%</span></p>
+            <p class="original-price">9,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2356-C12986-4.jpg" alt="Chó">
+            <p>Husky Đen Trắng Đực C12986</p>
+            <p class="price">7,990,000đ<span class="discount">-11%</span></p>
+            <p class="original-price">9,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2286-C12956-1.jpg" alt="Chó">
+            <p>Husky Đen Trắng Đực C12956</p>
+            <p class="price">7,990,000đ<span class="discount">-11%</span></p>
+            <p class="original-price">9,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Husky/C2285-C12955-1.jpg" alt="Chó">
+            <p>Husky Đen Trắng Đực C12955</p>
+            <p class="price">1,490,000đ <span class="discount">-60%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div> 
+
+    </div>
+
+    <script>
+
+        function showProductInfo(element) {
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            
+            modal.style.display = "block";
+            document.getElementById('productImage').src = element.getElementsByTagName('img')[0].src;
+            document.getElementById('productName').innerText = element.getElementsByTagName('p')[0].innerText;
+            document.getElementById('productPrice').innerText = element.getElementsByTagName('p')[1].innerText;
+            document.getElementById('productOriginalPrice').innerText = element.getElementsByTagName('p')[2].innerText;
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+    

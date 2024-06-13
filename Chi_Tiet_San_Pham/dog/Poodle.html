@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Chó Poodle Thuần Chủng</title>
+    <link rel="icon" href="/images/Logo.jpg" type="image/jpg">
+    <link rel="stylesheet" type="text/css" href="../Chi_Tiet_San_Pham.css">
+    <link rel="stylesheet" href="product_details.html?id=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+</head>
+
+<body>
+
+    <h1>Poodle</h1>
+
+    <div class="container">
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-body">
+                <img id="productImage" src="" alt="Chó">
+                <div class="product-info">
+                  <p id="productName"></p>
+                  <p id="productPrice"></p>
+                  <p id="productOriginalPrice"></p>
+                  <button id="buyBtn" class="buy-button">CHAT ZALO - HỎI THÊM VỀ BÉ</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Eli.jpg" alt="Chó">
+            <p>Eli - Poodle Tiny Bò Sữa Cái</p>
+            <p class="price">4,490,000đ <span class="discount">-10%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Alex.jpg" alt="Chó">
+            <p>Alex - Siêu Phẩm Poodle Bò Sữa Xám Đực</p>
+            <p class="price">4,990,000đ <span class="discount">-17%</span></p>
+            <p class="original-price">6,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Lucky.jpg" alt="Chó">
+            <p>Lucky - Poodle Kem Đực</p>
+            <p class="price">3,990,000đ <span class="discount">-20%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div>
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Baron.jpg" alt="Chó">
+            <p>Baron - Poodle Kem Đực</p>
+            <p class="price">3,990,000đ <span class="discount">-20%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Carter.jpg" alt="Chó">
+            <p>Carter - Poodle Nâu Đỏ Đực, Tiêm 2 Mũi</p>
+            <p class="price">3,490,000đ <span class="discount">-30%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Boomer.jpg" alt="Chó">
+            <p>Boomer - Poodle Nâu Đỏ Đực, Tiêm 2 Mũi</p>
+            <p class="price">2,990,000đ <span class="discount">-40%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Suki.jpg" alt="Chó">
+            <p>Suki - Poodle Nâu Đỏ Đực 4 Tháng</p>
+            <p class="price">1,490,000đ <span class="discount">-70%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div> 
+
+        <div class="product" onclick="showProductInfo(this)">
+            <img src="Images/Poodle/Poodle-Lorancy.jpg" alt="Chó">
+            <p>Lorancy - Poodle Nâu Đỏ Cái</p>
+            <p class="price">1,490,000đ <span class="discount">-60%</span></p>
+            <p class="original-price">5,000,000đ</p>
+        </div> 
+
+    </div>
+
+    <script>
+
+        function showProductInfo(element) {
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            
+            modal.style.display = "block";
+            document.getElementById('productImage').src = element.getElementsByTagName('img')[0].src;
+            document.getElementById('productName').innerText = element.getElementsByTagName('p')[0].innerText;
+            document.getElementById('productPrice').innerText = element.getElementsByTagName('p')[1].innerText;
+            document.getElementById('productOriginalPrice').innerText = element.getElementsByTagName('p')[2].innerText;
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+    

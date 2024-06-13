@@ -1,0 +1,114 @@
+.toolbar {
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    width: 97.60%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 10px;
+    z-index: 100; 
+}
+
+.menu-button,
+.dogs-button,
+.cats-button,
+.login-button,
+.register-button {
+    padding: 10px 20px;
+    background-color: hsl(0, 0%, 0%);
+    color: #fff;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease; 
+}
+
+.menu-button:hover,
+.dogs-button:hover,
+.cats-button:hover,
+.login-button:hover,
+.register-button:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+#site-search {
+    width: 300px;
+    padding: 10px;
+    margin-left: 290px;
+    border-radius: 15px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    transition: background-color 0.4s ease;
+}
+
+#site-search:hover,
+#site-search:focus {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+  
+.modal-content {
+    width: 300px;
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.modal-content p {
+    text-align: center;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="tel"],
+.modal-content input[type="email"] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 10px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.modal-content input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
